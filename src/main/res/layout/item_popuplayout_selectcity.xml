@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+android:id="@+id/relativeLayout_item_selectCity"
+xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <View
+        android:layout_width="10dp"
+        android:layout_height="40dp"/>
+    <ImageView
+        android:layout_width="228.9dp"
+        android:layout_height="151.2dp"
+        android:src="@drawable/welcome_selectcity"/>
+</LinearLayout>

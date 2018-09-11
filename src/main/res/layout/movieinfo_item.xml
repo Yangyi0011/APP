@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/linearLayout_movieInfo_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!--海报-->
+        <com.example.administrator.mimovie.util.SmartImageView
+            android:id="@+id/SmartImageView_Detail_Movie_Poster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/movie_poster"
+            android:scaleType="fitXY" />
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout_movieInfo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_alignParentBottom="true"
+            android:background="#80000000">
+
+            <!--正在热映还是即将上映logo-->
+            <ImageView
+                android:id="@+id/ImageView_Detail_now_or_will"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginEnd="82dp"
+                android:layout_marginStart="68dp"
+
+                android:layout_marginTop="9dp"
+                app:layout_constraintBottom_toTopOf="@+id/TextView_Detail_director_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/Button_Detail_score"
+                app:layout_constraintHorizontal_bias="0.272"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--评分-->
+            <Button
+                android:id="@+id/Button_Detail_score"
+                android:layout_width="50dp"
+                android:layout_height="22dp"
+                android:layout_alignLeft="@+id/ImageView_Detail_now_or_will"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="47dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_shape"
+
+                android:paddingBottom="2dp"
+                android:paddingTop="1dp"
+                android:text="8.1"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ImageView_Detail_now_or_will"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ImageView_Detail_now_or_will"
+                app:layout_constraintTop_toTopOf="@+id/ImageView_Detail_now_or_will"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--导演-->
+            <TextView
+                android:id="@+id/TextView_Detail_director_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="导演名"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/TextView_Detail_movieType"
+                app:layout_constraintStart_toStartOf="@+id/ImageView_Detail_now_or_will"
+                app:layout_constraintTop_toBottomOf="@+id/ImageView_Detail_now_or_will" />
+
+            <!--电影类型-->
+            <TextView
+                android:id="@+id/TextView_Detail_movieType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:text="类型/类型/类型/类型"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/TextView_Detail_timeLength"
+                app:layout_constraintStart_toStartOf="@+id/TextView_Detail_timeLength"
+                app:layout_constraintTop_toBottomOf="@+id/TextView_Detail_director_name" />
+
+            <!--电影时长-->
+            <TextView
+                android:id="@+id/TextView_Detail_timeLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:text="xxx分钟"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/TextView_Detail_releaseTime"
+                app:layout_constraintStart_toStartOf="@+id/TextView_Detail_releaseTime"
+                app:layout_constraintTop_toBottomOf="@+id/TextView_Detail_movieType" />
+
+            <!--上映时间-->
+            <TextView
+                android:id="@+id/TextView_Detail_releaseTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="68dp"
+                android:text="xxxx-xx-xx"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TextView_Detail_timeLength" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!--电影名-->
+        <Button
+            android:id="@+id/Button_Detail_movieName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/describe_titleimg"
+            android:textSize="18dp"
+            android:text="电影名"
+            android:textColor="#000000"
+            android:layout_alignParentTop="true" />
+
+        <!--电影描述-->
+        <Button
+            android:id="@+id/Button_Detail_describe_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/describe_frameimg"
+            android:paddingTop="23dp"
+            android:paddingLeft="23dp"
+            android:paddingRight="33dp"
+            android:paddingBottom="23dp"
+            android:textSize="14dp"
+            android:layout_below="@+id/Button_Detail_movieName"
+            android:text="电影详细描述电影详细描述电影详细描述电影详细描述
+电影详细描述电影详细描述电影详细描述电影详细描述电影详细描述电影详细描述电影详细描述"
+            />
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/down"
+        />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#aa000000" />
+
+    <Button
+        android:id="@+id/tidbits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="14dp"
+        android:text="预告"
+        android:background="@drawable/name_logo1"
+        />
+
+    <!--预告链接-->
+    <TextView
+        android:id="@+id/TextView_Detail_tidbits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="14dp"
+        android:text="https://www.baidu.com/"
+        android:autoLink="web"
+        />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#aa000000" />
+  </LinearLayout>

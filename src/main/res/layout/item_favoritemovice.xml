@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/relativeLayout_item_favirite_viewitem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.example.administrator.mimovie.util.SmartImageView
+        android:id="@+id/movicesimage"
+        android:layout_width="140dp"
+        android:layout_height="160dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/rcontent"
+        android:layout_toStartOf="@+id/rcontent"
+        android:src="@drawable/a" />
+
+    <TextView
+        android:id="@+id/movicetcn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/movicesimage"
+        android:layout_marginLeft="122dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="11dp"
+        android:text="我是电影名称"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/dN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/movicetcn"
+        android:layout_toEndOf="@+id/movicesimage"
+        android:layout_toRightOf="@+id/movicesimage"
+        android:text="我是导演"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/rcontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/movicetcn"
+        android:layout_alignStart="@+id/movicetcn"
+        android:layout_below="@+id/dN"
+        android:text="观众评分："
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rcontent"
+        android:layout_alignBottom="@+id/rcontent"
+        android:layout_toEndOf="@+id/rcontent"
+        android:layout_toRightOf="@+id/rcontent"
+        android:text="我是评分"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/actors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rcontent"
+        android:layout_toEndOf="@+id/movicesimage"
+        android:layout_toRightOf="@+id/movicesimage"
+        android:text="主演1/主演2/主演3"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/rdcontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/movicesimage"
+        android:layout_alignLeft="@+id/actors"
+        android:layout_alignStart="@+id/actors"
+        android:text="上映时间:"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/releaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rdcontent"
+        android:layout_alignBottom="@+id/rdcontent"
+        android:layout_toEndOf="@+id/rdcontent"
+        android:layout_toRightOf="@+id/rdcontent"
+        android:text="xxxx年"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/moviceid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/releaseDate"
+        android:layout_alignBottom="@+id/releaseDate"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:text="我是id"
+        android:textSize="10sp" />
+
+</RelativeLayout>
